@@ -58,5 +58,10 @@ export async function createObservation(observation, signal) {
 }
 
 export async function listObservations(signal) {
-  return []
+  const url = `${API_BASE_URL}/observations`
+  const options = {
+    headers,
+    signal,
+  }
+  return await fetchJson(url, options)
 }

@@ -4,7 +4,7 @@ const cors = require("cors");
 const errorHandler = require("./errors/errorHandler");
 const notFound = require("./errors/notFound");
 
-const observationsRouter = require('./observations/observation.router')
+const observationsRouter = require("./observations/observations.router")
 
 const app = express();
 
