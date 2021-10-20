@@ -5,7 +5,8 @@ function Menu() {
   const location = useLocation();
 
   const homeClass = location.pathname === "/" ? "nav-item active" : "nav-item";
-
+  
+  // nav bar: displays links to home page and create observation page
   return (
     <div className="bg-light mb-2">
       <nav className="container navbar navbar-expand-lg navbar-light bg-light">

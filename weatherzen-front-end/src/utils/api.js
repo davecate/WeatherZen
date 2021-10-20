@@ -46,6 +46,7 @@ async function fetchJson(url, options) {
 }
 
 
+// sends form data to the API with the appropriate HTTP method and headers attached
 export async function createObservation(observation, signal) {
   const url = `${API_BASE_URL}/observations`
   const options = {
@@ -57,6 +58,7 @@ export async function createObservation(observation, signal) {
   return await fetchJson(url, options)
 }
 
+// retrieves submitted observation data from the API
 export async function listObservations(signal) {
   const url = `${API_BASE_URL}/observations`
   const options = {

@@ -1,3 +1,5 @@
+// async error boundary prevents the server from freezing up if a faulty API call is made
+
 function asyncErrorBoundary(delegate, defaultStatus ) {
   return (request, response, next) => {
     Promise.resolve()

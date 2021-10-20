@@ -4,20 +4,23 @@ import { createObservation } from "../utils/api"
 import ErrorAlert from "../layout/ErrorAlert";
 
 function ObservationCreate() {
+  // history hook to send user home once form is submitted
   const history = useHistory();
 
+  // state variables for form data and error handling
   const [observation, setObservation] = useState({
     latitude: "",
     longitude: "",
     sky_condition: "",
   })
-
   const [error, setError] = useState(null)
 
+  // handles 'cancel' button, sending user home
   function cancelHandler() {
     history.push("/");
   }
 
+  // handles 'submit' button, sending form data to the API and sending user home
   function submitHandler(event) {
     event.preventDefault();
     createObservation(observation)
@@ -27,6 +30,7 @@ function ObservationCreate() {
       .catch(setError)
   }
 
+  // handles changes to form fields
   function changeHandler({ target: { name, value } }) {
     setObservation((previousObservation) => ({
       ...previousObservation,
@@ -34,6 +38,7 @@ function ObservationCreate() {
     }))
   }
 
+  // displays the create observation form
   return (
     <main>
       <h1 className="mb-3">Create Observation</h1>

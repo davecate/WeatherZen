@@ -1,3 +1,5 @@
+// knex migrations: migrate up creates an SQL table to hold observation data, migrate down deletes the table
+
 exports.up = function (knex) {
     return knex.schema.createTable("observations", (table) => {
       table.increments("observation_id").primary();

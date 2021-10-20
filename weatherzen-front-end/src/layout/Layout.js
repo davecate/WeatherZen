@@ -9,6 +9,7 @@ import ObservationCreate from "../observations/ObservationCreate"
 function Layout() {
   return (
     <>
+      {/* routing for front-end components */}
       <Header />
       <Menu />
       <div className="container">
